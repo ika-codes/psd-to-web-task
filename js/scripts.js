@@ -18,6 +18,7 @@ function changeNavbar() {
         $('#js-nav').addClass('c-navigation__sticky');
         $('#js-toggle').addClass('is-sticky');
         $('#js-search-toggle').addClass('is-sticky');
+        $('#js-about-img').addClass('is-visible');
     } else {
         $('#js-nav').removeClass('c-navigation__sticky');
         $('#js-toggle').removeClass('is-sticky');

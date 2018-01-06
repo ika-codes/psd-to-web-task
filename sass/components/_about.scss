@@ -1,0 +1,27 @@
+.c-about {
+    margin: $gutter-vertical 0;
+
+    &__image {
+        position: relative;
+    }
+
+    &__image--img {
+        position: absolute;
+        width: auto;
+        bottom: -157px;
+        left: -80px;
+        opacity: 0;
+        transform: translateX(10rem);
+        transition: 1s ease-out;
+        &.is-visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 1.5rem;
+    }
+
+    
+}

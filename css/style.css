@@ -37,6 +37,52 @@ body {
   position: fixed;
   top: 0; }
 
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-animation-from-right {
+  animation-name: moveInRight;
+  animation-duration: .8s; }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+.c-about {
+  margin: 8rem 0; }
+  .c-about__image {
+    position: relative; }
+  .c-about__image--img {
+    position: absolute;
+    width: auto;
+    bottom: -157px;
+    left: -80px;
+    opacity: 0;
+    transform: translateX(10rem);
+    transition: 1s ease-out; }
+    .c-about__image--img.is-visible {
+      transform: translateX(0);
+      opacity: 1; }
+  .c-about__paragraph {
+    margin-bottom: 1.5rem; }
+
 .o-row {
   max-width: 117rem;
   margin: 0 auto; }
