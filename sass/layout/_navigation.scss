@@ -98,17 +98,10 @@
             justify-content: center;
             align-items: center;
             a {
-                display: block;
-                font-size: 3rem;
+                @include button;
                 font-weight: 300;
+                font-size: 3rem;
                 margin-bottom: $gutter-horizontal;
-                padding: 1rem 2rem;
-                color: $color-light;
-                text-decoration: none;
-                text-transform: uppercase;
-                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-light 50%);
-                background-size: 240%;
-                transition: all .4s;
                 &:hover {
                     background-position: 100%;
                     color: $color-primary;

@@ -2,10 +2,6 @@
     max-width: $grid-width;
     margin: 0 auto;
 
-    &:not(:last-child) {
-        margin-bottom: $gutter-vertical;
-    }
-
     @include u-clearfix;
 
     [class^="u-col-"] {
@@ -40,4 +36,16 @@
         width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
     }
 
+}
+
+.o-flex-row {
+    display: flex;
+    max-width: $grid-width;
+    margin: 0 auto;
+    .u-flex-1 {
+        flex: 1;
+    }
+    .u-flex-2 {
+        flex: 2;
+    }
 }

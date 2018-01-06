@@ -1,0 +1,40 @@
+.c-boxes {
+    margin-bottom: $gutter-vertical;
+    &__box {
+        margin: 0;
+        padding: 6rem 3.3rem 3.3rem;
+        transition: .5s;
+        &--nr1 {
+            background: $color-tertiary;
+           &:hover {
+                background: $color-tertiary-light;
+           }
+        }
+        &--nr2 {
+            background: $color-secondary;
+            &:hover {
+                background: $color-primary-dark;
+           }
+        }
+        &--nr3 {
+            background: $color-quaternary; 
+            &:hover {
+                background: $color-quaternary-light;
+           }
+        }
+        &--nr4 {
+            background: $color-primary; 
+            &:hover {
+                background: $color-primary-light;
+           }
+        }
+    }
+
+    &__paragraph {
+        max-width: 48rem;
+        padding: 1rem 0;
+        color: $color-light;
+        font-size: 1.3rem;
+    }
+
+}

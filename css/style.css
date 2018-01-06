@@ -33,6 +33,11 @@ body {
   color: #222626;
   font-weight: 300; }
 
+.c-heading-tertiary {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff; }
+
 .u-sticky {
   position: fixed;
   top: 0; }
@@ -83,11 +88,57 @@ body {
   .c-about__paragraph {
     margin-bottom: 1.5rem; }
 
+.c-boxes {
+  margin-bottom: 8rem; }
+  .c-boxes__box {
+    margin: 0;
+    padding: 6rem 3.3rem 3.3rem;
+    transition: .5s; }
+    .c-boxes__box--nr1 {
+      background: #43463e; }
+      .c-boxes__box--nr1:hover {
+        background: #565a50; }
+    .c-boxes__box--nr2 {
+      background: #37461d; }
+      .c-boxes__box--nr2:hover {
+        background: #758160; }
+    .c-boxes__box--nr3 {
+      background: #091e28; }
+      .c-boxes__box--nr3:hover {
+        background: #103445; }
+    .c-boxes__box--nr4 {
+      background: #73933c; }
+      .c-boxes__box--nr4:hover {
+        background: #85b641; }
+  .c-boxes__paragraph {
+    max-width: 48rem;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 1.3rem; }
+
+.c-btn {
+  display: block;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 240%;
+  transition: all .4s;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer; }
+  .c-btn:hover {
+    background-position: 100%;
+    color: #73933c;
+    transform: translateX(1rem); }
+  .c-btn--small {
+    font-weight: 700;
+    font-size: 1.4rem; }
+
 .o-row {
   max-width: 117rem;
   margin: 0 auto; }
-  .o-row:not(:last-child) {
-    margin-bottom: 8rem; }
   .o-row::after {
     content: "";
     display: table;
@@ -108,6 +159,15 @@ body {
     width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
   .o-row .u-col-3-of-4 {
     width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
+
+.o-flex-row {
+  display: flex;
+  max-width: 117rem;
+  margin: 0 auto; }
+  .o-flex-row .u-flex-1 {
+    flex: 1; }
+  .o-flex-row .u-flex-2 {
+    flex: 2; }
 
 .o-header {
   height: 100vh;
@@ -217,16 +277,16 @@ body {
       align-items: center; }
       .c-navigation__overlay--toggled a, .c-navigation__search-overlay--toggled a {
         display: block;
-        font-size: 3rem;
-        font-weight: 300;
-        margin-bottom: 3rem;
         padding: 1rem 2rem;
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
         background-size: 240%;
-        transition: all .4s; }
+        transition: all .4s;
+        font-weight: 300;
+        font-size: 3rem;
+        margin-bottom: 3rem; }
         .c-navigation__overlay--toggled a:hover, .c-navigation__search-overlay--toggled a:hover {
           background-position: 100%;
           color: #73933c;
