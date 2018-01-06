@@ -1,0 +1,36 @@
+.o-header {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../img/hero-small.jpg);
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+	position: relative;
+	border-bottom: 2px solid $color-primary-light;
+
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+            only screen and (min-width: 120em) {
+        background-image: url(../img/hero.jpg);
+	}
+
+	&__text-box {
+		display: flex;
+		height: 80%; //check this later!
+		align-items: center;
+	}
+
+	&__adnotation--rotated {
+		position: absolute;
+		transform: rotateZ(-90deg);
+		top: 50vh;
+		left: 0;
+		text-transform: uppercase;
+	}
+
+	&__adnotation {
+		font-size: 1.2rem;
+		font-weight: 300;
+		color: $color-light;
+	}
+}
