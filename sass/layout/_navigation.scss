@@ -1,24 +1,32 @@
 .c-navigation {
     width: 100%;
+    padding: 3.5rem 0;
     background: rgba(255, 255, 255, .7);
     overflow: hidden;
+    transition: 1s;
+
+    &__sticky {
+        padding: .5rem 0;
+    }
     
     &__logo {
         display: inline-block;
         width: 100%;
-        font-size: 4rem;
-        color: $color-primary-light;
-        font-weight: 700;
-        text-decoration: none;
-        padding: 3.5rem 0;
         position: relative;
         text-align: center;
+        a {
+            font-size: 4rem;
+            color: $color-primary-light;
+            font-weight: 700;
+            text-decoration: none;
+        }
     }
 
     &__button {
         @include nav-buttons;
         top: 5rem;
         right: 7rem;
+        transition: top 1s;
         &:hover {
           opacity: .7;
         }
@@ -37,6 +45,10 @@
                 transform: translateY(-11px) translateX(0) rotate(-45deg);
                 background: $color-light;
             }
+        }
+
+        &.is-sticky {
+            top: 2.4rem;
         }
 
         span {
@@ -112,6 +124,7 @@
         right: 15rem;
         background: url(../img/search.svg) no-repeat center;
         background-size: 3rem;
+        transition: top 1s;
         &:hover {
           opacity: .7;
         }
@@ -120,6 +133,14 @@
             background: url(../img/cross.svg) no-repeat;
             background-size: 3rem;
             top: 4.65rem;
+        }
+
+        &.is-sticky {
+            top: 1.6rem;
+        }
+
+        &.is-sticky.is-active {
+            top: 2rem;
         }
     }
 } 

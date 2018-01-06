@@ -3,16 +3,23 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
-	color: $color-dark;
+	color: $color-grey;
 	font-size: $default-font-size;
 }
 
-.heading-primary {
+.c-heading-primary {
 	font-size: 3.5rem;
 	color: $color-text-light;
 }
 
-.heading-paragraph {
+.c-heading-paragraph {
 	font-size: 1.3rem;
 	color: $color-light;
 }
+
+.c-heading-secondary {
+	font-size: 3.5rem;
+	color: $color-dark;
+	font-weight: 300;
+}
+

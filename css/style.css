@@ -20,13 +20,22 @@ body {
   color: #959595;
   font-size: 1.4rem; }
 
-.heading-primary {
+.c-heading-primary {
   font-size: 3.5rem;
   color: #dcdfe0; }
 
-.heading-paragraph {
+.c-heading-paragraph {
   font-size: 1.3rem;
   color: #fff; }
+
+.c-heading-secondary {
+  font-size: 3.5rem;
+  color: #222626;
+  font-weight: 300; }
+
+.u-sticky {
+  position: fixed;
+  top: 0; }
 
 .o-row {
   max-width: 117rem;
@@ -68,7 +77,7 @@ body {
       background-image: url(../img/hero.jpg); } }
   .o-header__text-box {
     display: flex;
-    height: 80%;
+    height: 100%;
     align-items: center; }
   .o-header__adnotation--rotated {
     position: absolute;
@@ -83,18 +92,22 @@ body {
 
 .c-navigation {
   width: 100%;
+  padding: 3.5rem 0;
   background: rgba(255, 255, 255, 0.7);
-  overflow: hidden; }
+  overflow: hidden;
+  transition: 1s; }
+  .c-navigation__sticky {
+    padding: .5rem 0; }
   .c-navigation__logo {
     display: inline-block;
     width: 100%;
-    font-size: 4rem;
-    color: #85b641;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 3.5rem 0;
     position: relative;
     text-align: center; }
+    .c-navigation__logo a {
+      font-size: 4rem;
+      color: #85b641;
+      font-weight: 700;
+      text-decoration: none; }
   .c-navigation__button {
     position: fixed;
     height: 4rem;
@@ -103,7 +116,8 @@ body {
     z-index: 100;
     transition: opacity .25s ease;
     top: 5rem;
-    right: 7rem; }
+    right: 7rem;
+    transition: top 1s; }
     .c-navigation__button:hover {
       opacity: .7; }
     .c-navigation__button.is-active .c-navigation__button--top {
@@ -115,6 +129,8 @@ body {
     .c-navigation__button.is-active .c-navigation__button--bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: #fff; }
+    .c-navigation__button.is-sticky {
+      top: 2.4rem; }
     .c-navigation__button span {
       background: #758160;
       border: none;
@@ -179,13 +195,18 @@ body {
     top: 4.1rem;
     right: 15rem;
     background: url(../img/search.svg) no-repeat center;
-    background-size: 3rem; }
+    background-size: 3rem;
+    transition: top 1s; }
     .c-navigation__search:hover {
       opacity: .7; }
     .c-navigation__search.is-active {
       background: url(../img/cross.svg) no-repeat;
       background-size: 3rem;
       top: 4.65rem; }
+    .c-navigation__search.is-sticky {
+      top: 1.6rem; }
+    .c-navigation__search.is-sticky.is-active {
+      top: 2rem; }
 
 .c-searchform {
   width: 100%;
