@@ -81,4 +81,149 @@ body {
     font-weight: 300;
     color: #fff; }
 
+.c-navigation {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: hidden; }
+  .c-navigation__logo {
+    display: inline-block;
+    width: 100%;
+    font-size: 4rem;
+    color: #85b641;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 3.5rem 0;
+    position: relative;
+    text-align: center; }
+  .c-navigation__button {
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+    top: 5rem;
+    right: 7rem; }
+    .c-navigation__button:hover {
+      opacity: .7; }
+    .c-navigation__button.is-active .c-navigation__button--top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: #fff; }
+    .c-navigation__button.is-active .c-navigation__button--middle {
+      opacity: 0;
+      background: #fff; }
+    .c-navigation__button.is-active .c-navigation__button--bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: #fff; }
+    .c-navigation__button span {
+      background: #758160;
+      border: none;
+      height: .3rem;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .35s ease;
+      cursor: pointer; }
+      .c-navigation__button span:nth-of-type(2) {
+        top: 11px; }
+      .c-navigation__button span:nth-of-type(3) {
+        top: 22px; }
+  .c-navigation__overlay, .c-navigation__search-overlay {
+    position: fixed;
+    background: #73933c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden; }
+    .c-navigation__overlay.is-open, .c-navigation__search-overlay.is-open {
+      opacity: .9;
+      visibility: visible;
+      height: 100%; }
+    .c-navigation__overlay--toggled, .c-navigation__search-overlay--toggled {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .c-navigation__overlay--toggled a, .c-navigation__search-overlay--toggled a {
+        display: block;
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        padding: 1rem 2rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+        background-size: 240%;
+        transition: all .4s; }
+        .c-navigation__overlay--toggled a:hover, .c-navigation__search-overlay--toggled a:hover {
+          background-position: 100%;
+          color: #73933c;
+          transform: translateX(1rem); }
+  .c-navigation__search {
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+    top: 4.1rem;
+    right: 15rem;
+    background: url(../img/search.svg) no-repeat center;
+    background-size: 3rem; }
+    .c-navigation__search:hover {
+      opacity: .7; }
+    .c-navigation__search.is-active {
+      background: url(../img/cross.svg) no-repeat;
+      background-size: 3rem;
+      top: 4.65rem; }
+
+.c-searchform {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .c-searchform__input {
+    height: 6rem;
+    font-size: 5rem;
+    font-weight: 300;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: .3rem;
+    padding-right: 6rem;
+    background: none;
+    z-index: 3;
+    width: 70rem;
+    margin: 3rem 0;
+    border-bottom: 1px solid #dcdfe0;
+    cursor: text;
+    position: relative; }
+  .c-searchform__submit {
+    display: inline-block;
+    paddiing: 1rem;
+    color: #fff;
+    position: absolute;
+    transform: translate(32rem, 4.8rem);
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    z-index: 10;
+    opacity: .4; }
+    .c-searchform__submit:hover {
+      opacity: 0.8;
+      cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

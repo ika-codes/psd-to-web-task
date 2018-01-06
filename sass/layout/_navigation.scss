@@ -1,0 +1,168 @@
+.c-navigation {
+    width: 100%;
+    background: rgba(255, 255, 255, .7);
+    overflow: hidden;
+    
+    &__logo {
+        display: inline-block;
+        width: 100%;
+        font-size: 4rem;
+        color: $color-primary-light;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 3.5rem 0;
+        position: relative;
+        text-align: center;
+    }
+
+    &__button {
+        @include nav-buttons;
+        top: 5rem;
+        right: 7rem;
+        &:hover {
+          opacity: .7;
+        }
+
+        &.is-active {
+            .c-navigation__button--top {
+                transform: translateY(11px) translateX(0) rotate(45deg);
+                background: $color-light;
+            }
+            .c-navigation__button--middle {
+                opacity: 0;
+                background: $color-light;
+            }
+            
+            .c-navigation__button--bottom {
+                transform: translateY(-11px) translateX(0) rotate(-45deg);
+                background: $color-light;
+            }
+        }
+
+        span {
+            background: $color-primary-dark;
+            border: none;
+            height: .3rem;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition:  all .35s ease;
+            cursor: pointer;
+              &:nth-of-type(2) {
+                top: 11px;
+              }
+              &:nth-of-type(3) {
+                top: 22px;
+            }
+        }
+    }
+
+    &__overlay, &__search-overlay {
+        position: fixed;
+        background: $color-primary;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .35s, visibility .35s, height .35s;
+        overflow: hidden;
+        
+        &.is-open {
+            opacity: .9;
+            visibility: visible;
+            height: 100%;
+        } 
+        
+        &--toggled {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            a {
+                display: block;
+                font-size: 3rem;
+                font-weight: 300;
+                margin-bottom: $gutter-horizontal;
+                padding: 1rem 2rem;
+                color: $color-light;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-light 50%);
+                background-size: 240%;
+                transition: all .4s;
+                &:hover {
+                    background-position: 100%;
+                    color: $color-primary;
+                    transform: translateX(1rem);
+                }
+            }
+        }
+    }
+
+    &__search {
+        @include nav-buttons;
+        top: 4.1rem;
+        right: 15rem;
+        background: url(../img/search.svg) no-repeat center;
+        background-size: 3rem;
+        &:hover {
+          opacity: .7;
+        }
+
+        &.is-active {
+            background: url(../img/cross.svg) no-repeat;
+            background-size: 3rem;
+            top: 4.65rem;
+        }
+    }
+} 
+
+.c-searchform {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__input {
+        height: 6rem;
+        font-size: 5rem;
+        font-weight: 300;
+        display: inline-block;
+        border: none;
+        outline: none;
+        color: $color-light;
+        padding: .3rem;
+        padding-right: 6rem;
+        background: none;
+        z-index: 3;
+        width: 70rem;
+        margin: 3rem 0;
+        border-bottom: 1px solid $color-text-light;
+        cursor: text;
+        position: relative;
+      }
+      &__submit {
+        display: inline-block;
+        paddiing: 1rem;
+        color: $color-light;
+        position: absolute;
+        transform: translate(32rem, 4.8rem);
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        z-index: 10;
+        opacity: .4;
+        &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        }
+    }
+}
