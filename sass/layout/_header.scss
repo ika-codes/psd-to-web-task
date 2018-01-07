@@ -8,24 +8,37 @@
 	position: relative;
 	border-bottom: 2px solid $color-primary-light;
 
-	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+	@media only screen and (min-resolution: 192dpi) and (min-width: 36em),
+            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em),
             only screen and (min-width: 120em) {
         background-image: url(../img/hero.jpg);
 	}
+
+	@include respond(medium) {
+        height: auto;
+    }
 
 	&__text-box {
 		display: flex;
 		height: 100%;
 		align-items: center;
+
+		@include respond(medium) {
+			padding: 12rem 0;
+		}
 	}
 
 	&__adnotation--rotated {
+		display: none;
 		position: absolute;
 		transform: rotateZ(-90deg);
 		top: 50vh;
 		left: 0;
 		text-transform: uppercase;
+
+		@include respond(extra-large) {
+            display: inline-block;
+        }
 	}
 
 	&__adnotation {

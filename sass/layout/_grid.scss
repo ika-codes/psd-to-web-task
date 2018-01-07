@@ -10,42 +10,41 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
         }
+
+        @include respond(medium) {
+            width: 100% !important;
+        }
     }
 
     .u-col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);  
     }
-
-    .u-col-1-of-3 {
-        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-    }
-
-    .u-col-2-of-3 {
-        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-    }
-
-    .u-col-1-of-4 {
-        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-    }
-
-    .u-col-2-of-4 {
-        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-    }
-
-    .u-col-3-of-4 {
-        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-    }
-
 }
 
 .o-flex-row {
     display: flex;
     max-width: $grid-width;
     margin: 0 auto;
+
+    @include respond(medium) {
+        flex-wrap: wrap;
+    }
+
     .u-flex-1 {
         flex: 1;
     }
     .u-flex-2 {
         flex: 2;
+    }
+
+    [class^="u-flex-"] {
+        @include respond(medium) {
+            flex: auto;
+            margin: 0 5rem;
+        }
+
+        @include respond(small) {
+            margin: 0 2rem;
+        }
     }
 }

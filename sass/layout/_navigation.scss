@@ -4,6 +4,8 @@
     background: rgba(255, 255, 255, .7);
     overflow: hidden;
     transition: 1s;
+    position: relative;
+    z-index: 70;
 
     &__sticky {
         padding: .5rem 0;
@@ -81,6 +83,7 @@
         visibility: hidden;
         transition: opacity .35s, visibility .35s, height .35s;
         overflow: hidden;
+        z-index: 80;
         
         &.is-open {
             opacity: .9;
