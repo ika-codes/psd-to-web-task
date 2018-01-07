@@ -70,9 +70,14 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
-.u-animation-from-right {
-  animation-name: moveInRight;
-  animation-duration: .8s; }
+.u-hidden {
+  opacity: 0;
+  transform: translateX(-10rem);
+  transition: 1s ease-out; }
+
+.u-slide-in {
+  opacity: 1;
+  transform: translateX(0); }
 
 .c-about {
   margin: 8rem 0; }
