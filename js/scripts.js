@@ -48,8 +48,8 @@ window.onload = function() {
         let heading = document.querySelector('#js-heading');
         let paragraph = document.querySelector('#js-paragraph');
         heading.classList.add('u-slide-in');
-        setTimeout(function() { paragraph.classList.add('u-slide-in')}, 500);
+        setTimeout(function() { paragraph.classList.add('u-slide-in'); }, 500);
     }
 
     setTimeout(slideIn, 700);
-}
+};
