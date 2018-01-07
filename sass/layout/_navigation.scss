@@ -6,11 +6,18 @@
     transition: 1s;
     z-index: 70;
 
+    @include respond(small) {
+        padding: 4rem 0;
+    }
+
     &__sticky {
         padding: .5rem 0;
-        height: 7.8rem;
         background: rgba(255, 255, 255, 1);
         box-shadow: 0 0px 50px -8px $color-grey;
+
+        @include respond(small) {
+            padding: 2rem 0;
+        }
     }
     
     &__logo {
@@ -36,7 +43,7 @@
         }
 
         @include respond(extra-small) {
-            width: 50%;
+            width: 60%;
             padding-left: 1rem;
         } 
     }

@@ -24,20 +24,20 @@
 		align-items: center;
 
 		@include respond(medium) {
-			padding: 12rem 0;
+			padding: 16rem 0;
 		}
 	}
 
 	&__adnotation--rotated {
-		display: none;
+		display: inline-block;
 		position: absolute;
 		transform: rotateZ(-90deg);
 		top: 50vh;
 		left: 0;
 		text-transform: uppercase;
 
-		@include respond(extra-large) {
-            display: inline-block;
+		@include respond(grid-size) {
+            display: none;
         }
 	}
 

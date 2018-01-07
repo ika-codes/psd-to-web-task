@@ -8,6 +8,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 160em) {
+    html {
+      font-size: 80%; } }
 
 body {
   overflow-x: hidden; }
@@ -89,9 +92,15 @@ body {
       transform: translateX(0);
       opacity: 1;
       z-index: -1; }
+    @media only screen and (max-width: 76.25em) {
+      .c-about__image--img {
+        max-width: 50vw;
+        bottom: -12rem; } }
+    @media only screen and (max-width: 62em) {
+      .c-about__image--img {
+        bottom: -10rem; } }
     @media only screen and (max-width: 48em) {
       .c-about__image--img {
-        max-width: 378px;
         bottom: -3rem; } }
     @media only screen and (max-width: 36em) {
       .c-about__image--img {
@@ -236,17 +245,17 @@ body {
     align-items: center; }
     @media only screen and (max-width: 48em) {
       .o-header__text-box {
-        padding: 12rem 0; } }
+        padding: 16rem 0; } }
   .o-header__adnotation--rotated {
-    display: none;
+    display: inline-block;
     position: absolute;
     transform: rotateZ(-90deg);
     top: 50vh;
     left: 0;
     text-transform: uppercase; }
-    @media only screen and (min-width: 120em) {
+    @media only screen and (max-width: 76.25em) {
       .o-header__adnotation--rotated {
-        display: inline-block; } }
+        display: none; } }
   .o-header__adnotation {
     font-size: 1.2rem;
     font-weight: 300;
@@ -259,11 +268,16 @@ body {
   overflow: hidden;
   transition: 1s;
   z-index: 70; }
+  @media only screen and (max-width: 36em) {
+    .c-navigation {
+      padding: 4rem 0; } }
   .c-navigation__sticky {
     padding: .5rem 0;
-    height: 7.8rem;
     background: white;
     box-shadow: 0 0px 50px -8px #959595; }
+    @media only screen and (max-width: 36em) {
+      .c-navigation__sticky {
+        padding: 2rem 0; } }
   .c-navigation__logo {
     display: flex;
     width: 100%;
@@ -285,7 +299,7 @@ body {
         padding-left: 5rem; } }
     @media only screen and (max-width: 20.3em) {
       .c-navigation__logo {
-        width: 50%;
+        width: 60%;
         padding-left: 1rem; } }
   .c-navigation__button {
     position: fixed;

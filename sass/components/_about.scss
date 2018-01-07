@@ -21,8 +21,16 @@
             z-index: -1;
         }
 
+        @include respond(grid-size) {
+            max-width: 50vw;
+            bottom: -12rem;
+        }
+
+        @include respond(large) {
+            bottom: -10rem;
+        }
+
         @include respond(medium) {
-            max-width: 378px;
             bottom: -3rem;
         }
 
