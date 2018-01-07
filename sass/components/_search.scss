@@ -14,29 +14,17 @@
         outline: none;
         color: $color-light;
         padding: .3rem;
-        padding-right: 6rem;
         background: none;
         z-index: 3;
-        width: 70rem;
+        width: 70vw;
+        text-align: center;
         margin: 3rem 0;
         border-bottom: 1px solid $color-text-light;
         cursor: text;
         position: relative;
-      }
-      &__submit {
-        display: inline-block;
-        padding: 1rem;
-        color: $color-light;
-        position: absolute;
-        transform: translate(32rem, 4.8rem);
-        border: none;
-        background: none;
-        text-transform: uppercase;
-        z-index: 10;
-        opacity: .4;
-        &:hover {
-        opacity: 0.8;
-        cursor: pointer;
+        @include respond(medium) {
+            font-size: 2rem;
+            height: 3rem;
         }
-    }
+      }
 }

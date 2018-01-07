@@ -34,6 +34,9 @@
 }
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == extra-small {
+        @media only screen and (max-width: 20.3em) { @content };    //325
+    }
     @if $breakpoint == small {
         @media only screen and (max-width: 36em) { @content };    //575
     }
