@@ -43,6 +43,9 @@
     @if $breakpoint == large {
         @media only screen and (max-width: 62em) { @content };    //992
     }
+    @if $breakpoint == grid-size {
+        @media only screen and (max-width: 76.25em) { @content };    //1220
+    }
     @if $breakpoint == extra-large {
         @media only screen and (min-width: 120em) { @content };    //1920
     }

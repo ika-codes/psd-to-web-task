@@ -4,11 +4,13 @@
     background: rgba(255, 255, 255, .7);
     overflow: hidden;
     transition: 1s;
-    position: relative;
     z-index: 70;
 
     &__sticky {
         padding: .5rem 0;
+        height: 7.8rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0px 50px -8px $color-grey;
     }
     
     &__logo {
@@ -21,6 +23,15 @@
             color: $color-primary-light;
             font-weight: 700;
             text-decoration: none;
+            @include respond(small) {
+               font-size: 2rem;
+               line-height: 7rem;
+            }
+        }
+
+        @include respond(medium) {
+            text-align: left;
+            padding-left: 5rem;
         }
     }
 
@@ -70,6 +81,10 @@
                 top: 22px;
             }
         }
+
+        @include respond(small) {
+            right: 2rem;
+         }
     }
 
     &__overlay, &__search-overlay {
@@ -138,48 +153,10 @@
         &.is-sticky.is-active {
             top: 2rem;
         }
+
+        @include respond(small) {
+            right: 8rem;
+         }
     }
 } 
 
-.c-searchform {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &__input {
-        height: 6rem;
-        font-size: 5rem;
-        font-weight: 300;
-        display: inline-block;
-        border: none;
-        outline: none;
-        color: $color-light;
-        padding: .3rem;
-        padding-right: 6rem;
-        background: none;
-        z-index: 3;
-        width: 70rem;
-        margin: 3rem 0;
-        border-bottom: 1px solid $color-text-light;
-        cursor: text;
-        position: relative;
-      }
-      &__submit {
-        display: inline-block;
-        paddiing: 1rem;
-        color: $color-light;
-        position: absolute;
-        transform: translate(32rem, 4.8rem);
-        border: none;
-        background: none;
-        text-transform: uppercase;
-        z-index: 10;
-        opacity: .4;
-        &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-        }
-    }
-}

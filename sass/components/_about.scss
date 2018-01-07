@@ -35,7 +35,7 @@
         margin-bottom: 1.5rem;
     } 
 
-    @include respond(medium) {
+    @include respond(grid-size) {
         margin: $gutter-vertical 5rem;
     }
 }
