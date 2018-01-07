@@ -1,0 +1,30 @@
+.c-searchform {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__input {
+        height: 6rem;
+        font-size: 5rem;
+        font-weight: 300;
+        display: inline-block;
+        border: none;
+        outline: none;
+        color: $color-light;
+        padding: .3rem;
+        background: none;
+        z-index: 3;
+        width: 70vw;
+        text-align: center;
+        margin: 3rem 0;
+        border-bottom: 1px solid $color-text-light;
+        cursor: text;
+        position: relative;
+        @include respond(medium) {
+            font-size: 2rem;
+            height: 3rem;
+        }
+      }
+}

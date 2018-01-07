@@ -1,0 +1,49 @@
+.c-about {
+    margin: $gutter-vertical 0;
+
+    &__image {
+        position: relative;
+        z-index: 0;
+    }
+
+    &__image--img {
+        position: absolute;
+        width: auto;
+        right: 0;
+        bottom: -13rem;
+        opacity: 0;
+        transform: translateX(10rem);
+        transition: 1s ease-out;
+        z-index: 30;
+        &.is-visible {
+            transform: translateX(0);
+            opacity: 1;
+            z-index: -1;
+        }
+
+        @include respond(grid-size) {
+            max-width: 50vw;
+            bottom: -12rem;
+        }
+
+        @include respond(large) {
+            bottom: -10rem;
+        }
+
+        @include respond(medium) {
+            bottom: -3rem;
+        }
+
+        @include respond(small) {
+            display: none;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 1.5rem;
+    } 
+
+    @include respond(grid-size) {
+        margin: $gutter-vertical 5rem;
+    }
+}

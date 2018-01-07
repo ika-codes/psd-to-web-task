@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include respond(extra-large) {
+		font-size: 80%;
+	 }
+}
+
+body {
+	overflow-x: hidden;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-light;
+}

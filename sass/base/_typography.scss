@@ -1,0 +1,31 @@
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $color-grey;
+	font-size: $default-font-size;
+}
+
+.c-heading-primary {
+	font-size: 3.5rem;
+	color: $color-text-light;
+}
+
+.c-heading-paragraph {
+	font-size: 1.3rem;
+	color: $color-light;
+}
+
+.c-heading-secondary {
+	font-size: 3.5rem;
+	color: $color-dark;
+	font-weight: 300;
+}
+
+.c-heading-tertiary {
+	font-size: 3rem;
+	font-weight: 300;
+	color: $color-light;
+}
+

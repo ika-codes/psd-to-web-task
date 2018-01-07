@@ -1,0 +1,55 @@
+@mixin u-clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin u-absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin nav-buttons {
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease;
+}
+
+@mixin button {
+    display: block;
+    padding: 1rem 2rem;
+    color: $color-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-light 50%);
+    background-size: 240%;
+    transition: all .4s;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == extra-small {
+        @media only screen and (max-width: 20.3em) { @content };    //325
+    }
+    @if $breakpoint == small {
+        @media only screen and (max-width: 36em) { @content };    //575
+    }
+    @if $breakpoint == medium {
+        @media only screen and (max-width: 48em) { @content };     //768
+    }
+    @if $breakpoint == large {
+        @media only screen and (max-width: 62em) { @content };    //992
+    }
+    @if $breakpoint == grid-size {
+        @media only screen and (max-width: 76.25em) { @content };    //1220
+    }
+    @if $breakpoint == extra-large {
+        @media only screen and (min-width: 160em) { @content };    //2500
+    }
+}

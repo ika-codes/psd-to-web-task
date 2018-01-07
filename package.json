@@ -17,7 +17,7 @@
     "watch:browsersync": "node_modules/.bin/browser-sync start --server --files \"css/*.css\" \"*.html\" "
   },
   "keywords": [],
-  "author": "",
+  "author": "Weronika Skaczkowska",
   "license": "ISC",
   "dependencies": {
     "glob-run": "^0.1.6",

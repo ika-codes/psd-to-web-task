@@ -1,0 +1,15 @@
+.c-btn {
+    @include button;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    &:hover {
+        background-position: 100%;
+        color: $color-primary;
+        transform: translateX(1rem);
+    }
+    &--small {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+}
