@@ -38,13 +38,9 @@
     }
 
     [class^="u-flex-"] {
+
         @include respond(medium) {
             flex: auto;
-            margin: 0 5rem;
-        }
-
-        @include respond(small) {
-            margin: 0 2rem;
         }
     }
 }

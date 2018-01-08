@@ -13,7 +13,7 @@
         bottom: -13rem;
         opacity: 0;
         transform: translateX(10rem);
-        transition: 1s ease-out;
+        transition: transform 1s ease-out, opacity 1s ease-out;
         z-index: 30;
         &.is-visible {
             transform: translateX(0);

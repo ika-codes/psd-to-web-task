@@ -33,8 +33,9 @@
 		position: absolute;
 		transform: rotateZ(-90deg);
 		top: 50vh;
-		left: 0;
+		left: -2rem;
 		text-transform: uppercase;
+		padding-bottom: 2rem;
 
 		@include respond(grid-size) {
             display: none;
